@@ -60,7 +60,7 @@ public class dz1 {
             System.out.println(j);
             System.out.println(p);
 
-//dfssdfgdsfsdrdfsfsfssd
+
 
         }
     }
