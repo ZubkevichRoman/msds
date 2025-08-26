@@ -1,7 +1,9 @@
+package homework2;
+
 import java.util.Scanner;
 
 public class Dz2 {
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         //task 1
 
         Scanner scanner = new Scanner(System.in);
@@ -14,7 +16,6 @@ public class Dz2 {
         }
 
         //task 2
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Введите температуру ");
         double temp = scanner.nextInt();
         if (temp >= -5) {
@@ -29,19 +30,19 @@ public class Dz2 {
         }
 
         //task 4
-        int number = 7;
-        while (number <= 98) {
-            number = number + 7;
-            System.out.print(number + " ");
+        int number2 = 7;
+        while (number2 <= 98) {
+            number2 = number2 + 7;
+            System.out.print(number2 + " ");
         }
 
         //task *
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Введите любое целое положительное число");
         int count = 0;
-        for (int number = scanner.nextInt(); number >= 1; number--) {
-            count = count + number;
+        for (int number1 = scanner.nextInt(); number1 >= 1; number1--) {
+            count = count + number1;
             System.out.println(count);
+            scanner.close();
         }
     }
 }
