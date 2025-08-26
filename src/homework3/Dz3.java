@@ -105,9 +105,19 @@ public class Dz3 {
 //        добавить единицу к этому “числу” и на выходе получить исправленный массив. Массив не
 //        содержит нуля в начале, кроме самого числа 0
 
+        int[] array8 = new int[]{9, 9, 9};
+        for (int i = array8.length - 1; i >= 0; i--) {
+            if (array8[i] < 9) {
+                array8[i]++;
+                System.out.println(Arrays.toString(array8));
+                return;
+            } else {
+                array8[i] = 0;
+            }
         }
+        int[] result = new int[array8.length + 1];
+        result[0] = 1;
 
+        System.out.println(Arrays.toString(result));
     }
 }
-
-
