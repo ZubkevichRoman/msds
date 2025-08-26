@@ -1,11 +1,10 @@
 package homework3;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Dz3 {
     public static void main(String[] args) {
-        /* task 1 Пройти по массиву, вывести все элементы в прямом и в обратном порядке
+        // task 1 Пройти по массиву, вывести все элементы в прямом и в обратном порядке
         int[] array = new int[]{29, 34, 32, 75, 45};
         int result = 0;
         for (int i = 0; i < array.length; i++) {
@@ -99,7 +98,7 @@ public class Dz3 {
             System.out.println("Массив возрастающий " + " " + Arrays.toString(array6));
         } else {
             System.out.println("Массив не возрастает " + " " + Arrays.toString(array6));
-        }*/
+        }
 //        Имеется массив из неотрицательных чисел(любой). Представьте что массив
 //        представляет целое число (Например массив {1,2,3} -> 123, {9,9,9} -> 999). Задача
 //        добавить единицу к этому “числу” и на выходе получить исправленный массив. Массив не
@@ -115,9 +114,9 @@ public class Dz3 {
                 array8[i] = 0;
             }
         }
-        int[] result = new int[array8.length + 1];
-        result[0] = 1;
+        int[] result3 = new int[array8.length + 1];
+        result3[0] = 1;
 
-        System.out.println(Arrays.toString(result));
+        System.out.println(Arrays.toString(result3));
     }
 }
