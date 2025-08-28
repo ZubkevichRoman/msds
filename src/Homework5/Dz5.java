@@ -6,14 +6,14 @@ import java.util.Scanner;
 
 public class Dz5 {
     public static void main(String[] args) {
-        /* //*canner scanner = new Scanner(System.in);
+         //*canner scanner = new Scanner(System.in);
         Random random = new Random();
         int[][] array = new int[3][3];
         int sum = array[0][0];
           /**1.1 Создать двумерный массив, заполнить его случайными числами.
          1.2 Добавить к каждому значению число, которое пользователь будет вводить с консоли.
          1.3 Найти сумму всех получившихся элементов и вывести в консоль
-         *//*
+         */
         System.out.println(" Изначальный массив ");
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length; j++) {
@@ -55,6 +55,7 @@ public class Dz5 {
          * B W B W B W B W
          * W B W B W B W B
          * B W B W B W B W
+         */
 
         String[][] deepArray = new String[8][8];
         for (int i = 0; i < 8; i++) {
@@ -79,6 +80,7 @@ public class Dz5 {
          * Программа получает на вход два числа n и m.
          * Формат выходных данных:
          * Программа должна вывести полученный массив, отводя на вывод каждого числа ровно 3
+         */
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число по вертикали: ");
