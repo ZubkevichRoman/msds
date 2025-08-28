@@ -1,8 +1,8 @@
-package homework3;
+package homework4;
 
 import java.util.Arrays;
 
-public class Dz3 {
+public class Dz4 {
     public static void main(String[] args) {
         // task 1 Пройти по массиву, вывести все элементы в прямом и в обратном порядке
         int[] array = new int[]{29, 34, 32, 75, 45};
