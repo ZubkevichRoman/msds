@@ -1,7 +1,7 @@
 package Homework6.Atm;
 
 public class Main {
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         /**Задача *:
          Создать класс, описывающий банкомат. Набор купюр, находящихся в банкомате, должен
          задаваться тремя свойствами: количеством купюр номиналом 20, 50 и 100. Сделать
@@ -12,7 +12,6 @@ public class Main {
          количеством купюр каждого номинала **/
         SettingsAtm settingsAtm = new SettingsAtm(7,
                 9, 2);
-        settingsAtm.getMoneyInAtm();
         settingsAtm.addingMoneyToAtm();
         settingsAtm.WithdrawMoney();
 
