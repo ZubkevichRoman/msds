@@ -8,8 +8,15 @@ public class Apple extends Main{
      * используя сеттеры изменить значение поля color
      **/
     private String color = "Green";
-
     private String color() {
         return color = "Red";
+    }
+    public Apple(String color) {
+        this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "Apple color: " + color;
     }
 }
