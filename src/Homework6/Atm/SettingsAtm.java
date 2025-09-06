@@ -63,6 +63,7 @@ public class SettingsAtm {
      * * какого номинала выдаётся сумма
      **/
     private int allMoneyInAtm;
+
     public void WithdrawMoney() {
         allMoneyInAtm = theNumberOfBanknotesInFaceValue20 * 20 +
                 theNumberOfBanknotesInFaceValue50 * 50
@@ -73,10 +74,30 @@ public class SettingsAtm {
         System.out.println("Общая сумма всех купюр в банкомате " + allMoneyInAtm);
         System.out.println(" Введите сумму которую хотите снять ");
         WithDrawMoneyInAtm = scanner.nextInt();
-        if (WithDrawMoneyInAtm > allMoneyInAtm){
+        if (WithDrawMoneyInAtm < allMoneyInAtm) {
             allMoneyInAtm = allMoneyInAtm - WithDrawMoneyInAtm;
+
+        } else {
+            System.out.println("Недостаточно денег  в банкомате");
+            System.out.println(" Введите корректную сумму , " + " меньше чем : " + allMoneyInAtm);
         }
+        if (WithDrawMoneyInAtm % 10 != 0){
+            System.out.println(" Введите сумму кратную 10 ");
+        }
+        int need100 = Math.min(WithDrawMoneyInAtm / 100, theNumberOfBanknotesInFaceValue100);
+        int remaining = WithDrawMoneyInAtm - need100 * 100;
+
+        int need50 = Math.min(remaining / 50, theNumberOfBanknotesInFaceValue50);
+        remaining -= need50 * 50;
+
+        int need20 = Math.min(remaining / 20, theNumberOfBanknotesInFaceValue20);
+        remaining -= need20 * 20;
+        System.out.println("Сумма " + WithDrawMoneyInAtm + " выдана:");
+        if (need100 > 0) System.out.println("100 x " + need100);
+        if (need50 > 0) System.out.println("50 x " + need50);
+        if (need20 > 0) System.out.println("20 x " + need20);
 
 
-    }}
+    }
+}
 
