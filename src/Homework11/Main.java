@@ -86,29 +86,13 @@ public class Main {
         char[] deferenceSymbol1 = array[1].toCharArray();
         char[] deferenceSymbol2 = array[2].toCharArray();
         for (int i = 0; i < deferenceSymbol.length; i++) {
+            for (int j = 0; j < deferenceSymbol1.length; j++) {
+                for (int k = 0; k < deferenceSymbol2.length; k++) {//TODO не доделано
 
 
+                }
+            }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         System.out.println("Task5");
         String dsf = "hello world";
