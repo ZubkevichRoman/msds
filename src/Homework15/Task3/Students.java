@@ -16,7 +16,7 @@ public class Students {
      */
     private String name;
     private String group;
-    private String course;
+    private Integer course;
     private List<Integer> subjectAssessment;
     private double averageGrade = 0;
 
@@ -28,11 +28,12 @@ public class Students {
         this.averageGrade = averageGrade;
     }
 
-    public Students(String name, String group, String course, List<Integer> subjectAssessment) {
+    public Students(String name, String group, Integer course, List<Integer> subjectAssessment) {
         this.name = name;
         this.group = group;
         this.course = course;
         this.subjectAssessment = subjectAssessment;
+        AverageGrade(subjectAssessment);
     }
 
 
@@ -52,11 +53,11 @@ public class Students {
         this.group = group;
     }
 
-    public String getCourse() {
+    public Integer getCourse() {
         return course;
     }
 
-    public void setCourse(String course) {
+    public void setCourse(Integer course) {
         this.course = course;
     }
 
@@ -72,7 +73,9 @@ public class Students {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Students students = (Students) o;
-        return Double.compare(averageGrade, students.averageGrade) == 0 && Objects.equals(name, students.name) && Objects.equals(group, students.group) && Objects.equals(course, students.course) && Objects.equals(subjectAssessment, students.subjectAssessment);
+        return Double.compare(averageGrade, students.averageGrade) == 0 && Objects.equals(name, students.name)
+                && Objects.equals(group, students.group) && Objects.equals(course, students.course)
+                && Objects.equals(subjectAssessment, students.subjectAssessment);
     }
 
     @Override
@@ -88,12 +91,13 @@ public class Students {
         }
     }
 
-    public void AverageGrade() {
+    public void AverageGrade(List<Integer> subjectAssessment) {
         for (Integer grade : subjectAssessment) {
             averageGrade += grade;
         }
         averageGrade = averageGrade / subjectAssessment.size();
     }
+
 
     @Override
     public String toString() {
@@ -110,10 +114,10 @@ public class Students {
         while (iterator.hasNext()) {
             Students student = iterator.next();
             if (student.getAverageGrade() < 3) {
-                iterator.remove(); // Удаляем студента
+                iterator.remove();
                 System.out.println(student.getName() + " был удален из списка (средний балл < 3).");
             } else {
-                student.setCourse(student.getCourse() + 1); // Переводим на следующий курс
+                student.setCourse(student.getCourse() + 1);
                 System.out.println(student.getName() + " переведен на " + student.getCourse() + " курс ");
             }
         }

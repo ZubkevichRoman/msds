@@ -14,21 +14,22 @@ public class MainTask3 {
          * номер курса. А также печатает на консоль имена тех студентов из списка, которые
          * обучаются на данном курсе
          */
-        Students students = new Students("Vasia ", "2", "3", Arrays.asList(1, 3, 4, 2, 2, 5, 9));
-        Students students1 = new Students("Oleg ", "3", "1", Arrays.asList(1, 2, 6, 2, 2, 5, 9));
-        Students students2 = new Students("Masha ", "5", "2", Arrays.asList(1, 3, 7, 2, 2, 4, 9));
-        Students students3 = new Students("Yulia ", "5", "4", Arrays.asList(5, 2, 9, 2, 2, 4, 9));
-        Students students4 = new Students("Ilya  ", "1", "1", Arrays.asList(8, 8, 9, 9, 9, 9, 9));
+        Students students = new Students("Vasia ", "2", 2,Arrays.asList(1,2,4,4,7,6,5));
+        Students students1 = new Students("Oleg ", "3", 3, Arrays.asList(1, 1, 1, 2, 2, 1, 9));
+        Students students2 = new Students("Masha ", "5", 1, Arrays.asList(1, 3, 7, 2, 2, 4, 9));
+        Students students3 = new Students("Yulia ", "5", 1, Arrays.asList(5, 2, 9, 2, 2, 4, 9));
+        Students student5 = new Students("John", "3", 3, Arrays.asList(2, 5, 6, 3));
         ArrayList<Students> student = new ArrayList<>();
         student.add(students);
         student.add(students1);
         student.add(students2);
         student.add(students3);
-        student.add(students4);
+        student.add(student5);
         for (Students students5 : student) {
             System.out.println(students5);
         }
         Students.manageStudents(student);
+
 
     }
 }
