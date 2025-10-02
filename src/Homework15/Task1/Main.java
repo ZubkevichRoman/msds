@@ -1,8 +1,6 @@
-package Homework15;
+package Homework15.Task1;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
