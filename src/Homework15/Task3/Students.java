@@ -110,7 +110,7 @@ public class Students {
     }
 
     public static void manageStudents(List<Students> students) {
-        Iterator<Students> iterator = students.iterator();//TODO iterator
+        Iterator<Students> iterator = students.iterator();
         while (iterator.hasNext()) {
             Students student = iterator.next();
             if (student.getAverageGrade() < 3) {
